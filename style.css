@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -17,3 +18,55 @@ a{
 }
 
 /* Main styles */
+
+body{
+    max-width: 95%;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -1.8px;
+    margin-bottom: 10px;
+}
+
+a{
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+}
+
+.homework{
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+    transition: background-color 0.1s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.homework:hover{
+    background-color: #dedede;
+}
+
+.homework h2{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    display: inline;
+    margin-right: 30px;
+    color: #494eff;
+}
+
+.homework span{
+    font-size: 16px;
+    color: #757688;
+}
