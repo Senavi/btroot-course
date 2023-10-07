@@ -1,0 +1,86 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    max-height: 600px;
+    height: 100%;
+    width: 600px;
+    padding: 30px 50px;
+    background-color: #dbdeea;
+    border-radius: 10px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+label{
+    width: 100%;
+    display: flex;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h4{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+input {
+    height: 30px;
+    width: 250px;
+}
+
+.genders{
+    display: flex;
+    gap: 30px;
+}
+
+.genders label{
+    display: flex;
+    align-items: center;
+}
+
+input[type="radio"] {
+    width: 30px;
+    margin-right: 10px;
+}
+
+select{
+    width: 259px;
+    height: 40px;
+    padding: 10px;
+}
+
+textarea{
+    height: 50px;
+    width: 250px;
+}
+
+.checkbox{
+    display: flex;
+    justify-content: start;
+}
+
+input[type="checkbox"] {
+    width: 30px;
+    margin-right: 10px;
+}
+
+input[type="button"] {
+    max-width: 140px;
+    width: 100%;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
