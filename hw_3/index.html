@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Homework 3: Form</title>
+</head>
+<body>
+<form action="#" method="get" name="register">
+    <label>
+        <h4>Enter full name</h4>
+        <input type="text" name="full-name" id="full-name" placeholder="Full name" required>
+    </label>
+    <label>
+        <h4>Enter your email</h4>
+        <input type="email" name="email" id="email" placeholder="Email" required>
+    </label>
+    <label>
+        <h4>Create a password</h4>
+        <input type="password" name="pass" id="pass" placeholder="Create password" required>
+    </label>
+    <label>
+        <h4>Repeat your password</h4>
+        <input type="password" name="pass" placeholder="Repeat a password" required>
+    </label>
+    <label>
+        <h4>Gender</h4>
+        <div class="genders">
+                <label>
+                    <input type="radio" name="gender" id="male" required>
+                    <p>Male</p>
+                </label>
+            <label>
+                <input type="radio" name="gender" id="female" required>
+                <p>Female</p>
+            </label>
+        </div>
+    </label>
+    <label>
+        <h4>Your age</h4>
+        <input type="number" name="number" placeholder="Age" min="18" required>
+    </label>
+    <label>
+        <h4>Course</h4>
+        <select name="courses" id="courses">
+            <option value="">-=Choose your course=-</option>
+            <option value="frontend">Frontend</option>
+            <option value="uiux">UI/UX</option>
+        </select>
+    </label>
+    <label>
+        <h4>Full address</h4>
+        <textarea name="address" id="address" placeholder="Country, region, city/town, street"></textarea>
+    </label>
+    <label class="checkbox">
+            <input type="checkbox"><h4>I agree with my data usage.</h4>
+    </label>
+    <div class="btns">
+        <input type="button" value="Reset a form">
+        <input type="button" value="Register"></div>
+</form>
+</body>
+</html>
