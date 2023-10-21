@@ -1,152 +1,132 @@
 /* Importing Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
-/* Resetting Default Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styles */
-body {
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* Header Styles */
-header {
-    display: block;
-    height: 80px;
-    line-height: 80px;
-    text-align: center;
-}
-
-/* Logo Styles */
-header a img {
-    vertical-align: middle;
-}
-
-/* Navigation Styles */
-nav {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 198px;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-}
-
-/* Button Container Styles */
-.btns {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-/* Button Styles */
-button {
-    padding: 10px 20px;
-    margin-left: 10px;
-    border: none;
-    background-color: #FF9900;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:first-child {
-    background-color: transparent;
-    color: #222;
-    border: 1px solid #88839e;
-}
-
-/* Hero Section Styles */
-.hero {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+body{
+    font-family: Montserrat,sans-serif;
     width: 100%;
-    overflow: hidden; /* Clear floats */
-    max-height: 600px;
-    height: 100%;
-}
-
-/* Left Column Styles */
-.col-left {
-    display: inline-block;
-    width: 45%;
-    vertical-align: middle;
-    padding-right: 5%;
-    text-align: left;
-    min-height: 400px;
-    height: 100%;
-}
-
-.col-left > div {
-    display: inline-block;
-    vertical-align: middle;
-    width: 100%;
-}
-
-/* H1 Styles */
-.col-left h1 {
-    font-size: 44px;
-    font-weight: 700;
-}
-
-
-/* Right Column Styles */
-.col-right {
-    display: inline-block;
-    width: 50%;
-    vertical-align: top;
-}
-
-/* Illustration Styles */
-.illustration-right {
-    width: 100%;
-    display: block;
-}
-
-.features{
-    width: 100%;
-    background-image: url("../img/Features.png");
-    background-repeat: no-repeat;
-    object-fit: cover;
-    min-height: 510px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.container {
-    max-width: 1200px;
+header{
     width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.head-container {
+    max-width: 1170px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav ul{
+    display: flex;
+    gap: 20px;
+}
+
+li a{
+    text-decoration: none;
+    color: #222222;
+}
+
+li a:hover{
+    text-decoration: underline;
+}
+
+button{
+    padding: 8px 20px;
+    background-color: #e2a23a;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.btns button:nth-child(1) {
+    background-color: inherit;
+    color: black;
+    border: 1px solid #d2d2d2;
+    margin-right: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btns button:nth-child(1):hover {
+    background-color: #e2a23a;
+    color: #ffffff;
+    border: 1px solid rgba(210, 210, 210, 0);
+
+}
+
+.hero{
+    display: flex;
+    margin-top: 50px;
+    max-height: 500px;
+    height: 100%;
+}
+
+.col-left, .col-right{
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.container h2{
+.col-right img{
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.col-left p{
+    font-size: 16px;
+    line-height: 130%;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.features{
+    width: 100%;
+    background-image: url("../img/Features.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: contain;
+    min-height: 510px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2{
     font-size: 24px;
     font-weight: 600;
 }
 
 .featured_points{
     display: flex;
-    margin-top: 40px;
+    margin-top: 50px;
+    width: 80%;
 }
 
 .point{
@@ -165,22 +145,51 @@ button:first-child {
     align-items: center;
 }
 
-.icon-box:nth-child(1){
+.icon-box{
     background-color: #7752BE;
 }
 
-.icon-box:nth-child(2){
-    background-color: #FAB005;
-}
-.icon-box:nth-child(3){
-    background-color: #F03E3D;
-}
-.icon-box:nth-child(4){
-    background-color: #4DADF7;
-}
-
-.point h3{
+h3{
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 15px;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #d5d5d5;
+    margin-top: 50px;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 30px 0;
+    max-width: 1170px;
+}
+
+.footer-container nav {
+    display: flex;
+    gap: 50px;
+}
+
+.footer-container nav .column ul{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.sign-up{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sign-up input{
+    padding: 12px;
+    border-radius: 5px;
 }
