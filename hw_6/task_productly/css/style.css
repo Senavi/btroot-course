@@ -1,0 +1,120 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Resetting Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header Styles */
+header {
+    display: block;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+
+/* Logo Styles */
+header a img {
+    vertical-align: middle;
+}
+
+/* Navigation Styles */
+nav {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 198px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Button Container Styles */
+.btns {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    background-color: #FF9900;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:first-child {
+    background-color: transparent;
+    color: #222;
+    border: 1px solid #88839e;
+}
+
+/* Hero Section Styles */
+.hero {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+    overflow: hidden; /* Clear floats */
+    max-height: 600px;
+    height: 100%;
+}
+
+/* Left Column Styles */
+.col-left {
+    display: inline-block;
+    width: 45%;
+    vertical-align: middle;
+    padding-right: 5%;
+    text-align: left;
+    min-height: 400px;
+    height: 100%;
+}
+
+.col-left > div {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* H1 Styles */
+.col-left h1 {
+    font-size: 44px;
+    font-weight: 700;
+}
+
+
+/* Right Column Styles */
+.col-right {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+
+/* Illustration Styles */
+.illustration-right {
+    width: 100%;
+    display: block;
+}
