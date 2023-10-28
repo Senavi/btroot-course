@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@400;500;700&family=Francois+One&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Staatliches&family=Tourney:wght@400;500;600&display=swap');
+
+body {
+    font-family: "PT Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 70px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 70px;
+}
+
+header .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+}
+
+.col-left, nav {
+    display: flex;
+}
+
+.col-left {
+    gap: 50px;
+}
+
+.col-left > a {
+    font-family: Tourney, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+
+nav {
+    gap: 10px;
+    font-family: Staatliches, sans-serif;
+}
+
+nav a, nav > span {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+
+.headline {
+    display: flex;
+    gap: 10px;
+}
+
+.headline h2 {
+    font-family: "Francois One", sans-serif;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.content {
+    margin-top: 40px;
+}
+
+.content p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.content p span {
+    text-decoration: underline;
+}
+
+i {
+    font-style: italic;
+}
+
+section:nth-child(3) .content ul {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.content ul li {
+    margin: 10px 0;
+    line-height: 150%;
+}
+
+strong {
+    font-weight: 700;
+}
+
+em{
+    background-color: #dadada;
+}
+
+.code-tags:before {
+    content: "<Text>";
+}
+
+.code-tags:after {
+    content: "</Text>";
+}
+
+section:nth-child(4) .content p:last-child{
+    margin-top: 30px;
+}
