@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #F7F7F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    gap: 30px;
+}
+
+form{
+    background-color: #ffffff;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    width: 500px;
+}
+
+h1  {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.capture{
+    font-size: 15px;
+    color: #545454;
+    font-weight: 400;
+    padding-bottom: 7px;
+}
+
+input{
+    border: 1px solid #E4E4E4;
+    height: 38px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+input:focus{
+    border: 1px solid #1472ff;
+}
+
+.names{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="email"]{
+    width: 100%;
+}
+
+.support-text{
+    font-size: 13px;
+    color: #969696;
+    margin-top: 5px;
+}
+
+.genders{
+    margin: 20px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.genders label{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.genders label input{
+    width: 20px;
+    height: 20px;
+}
+
+.genders label p{
+    padding: 0;
+}
+
+.country{
+    display: flex;
+    gap: 10px;
+}
+
+.dropdown{
+    position: relative;
+}
+.dropdown img{
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+select{
+    border: 1px solid #E4E4E4;
+    height: 38px;
+    border-radius: 5px;
+    padding-left: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 210px;
+}
+
+.main-img{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.upload-img-btn{
+    position: relative;
+}
+
+.upload-img-btn input[type="file"]{
+    opacity: 0;
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    width: 200px;
+}
+
+.upload-img-btn button{
+    width: 200px;
+    position: absolute;
+    height: 30px;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: 1px solid #E4E4E4;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.delete{
+    height: 30px;
+    border: 1px solid #E4E4E4;
+    border-radius: 5px;
+    background-color: transparent;
+    margin-top: 3px;
+}
+
+form[name="profile"] .country{
+    margin-bottom: 20px;
+}
+
+.submition{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+input[type="submit"]{
+    background-color: #1472ff;
+    border: none;
+    color: white;
+    font-weight: 500;
+}
+
+.login {
+    height: 20px;
+    border-top: 1px solid #bebebe;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Homework 11</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<form action="#" method="post" name="register">
+  <h1>Create an Account</h1>
+  <fieldset class="names">
+    <label>
+      <p class="capture">First name</p>
+      <input type="text">
+    </label>
+    <label>
+      <p class="capture">Last name</p>
+      <input type="text">
+    </label>
+  </fieldset>
+  <fieldset class="email">
+    <label>
+      <p class="capture">E-mail</p>
+      <input type="email">
+      <p class="support-text">We'll never share your email with anyone else.</p>
+    </label>
+    <fieldset class="genders">
+      <label>
+        <input type="radio" name="gender" id="male">
+        <p class="capture">Male</p>
+      </label>
+      <label>
+        <input type="radio" name="gender" id="female">
+        <p class="capture">Female</p>
+      </label>
+    </fieldset>
+  </fieldset>
+  <fieldset class="country">
+    <label>
+      <p class="capture">Country</p>
+      <span class="dropdown">
+        <img src="img/Arrow%20%233%20Double.svg" alt="Dropdown icon">
+        <select name="country" id="country">
+        <option selected>Select</option>
+        <option>Ukraine</option>
+        <option>Poland</option>
+        <option>Turkey</option>
+      </select>
+      </span>
+    </label>
+    <label>
+      <p class="capture">City</p>
+      <input type="text">
+    </label>
+  </fieldset>
+  <fieldset class="submition">
+    <input type="submit" value="Sign up">
+    <p class="support-text">By clicking the 'Sign Up' button, you confirm that you accept our <a href="#">Terms of Use</a>
+      and <a href="#">Privacy Policy</a>.</p>
+  </fieldset>
+  <fieldset class="login">
+    <h5>Have an account? <a href="#">Log in</a></h5>
+  </fieldset>
+</form>
+<form action="#" method="post" name="profile">
+  <h1>Profile</h1>
+  <fieldset class="main-img">
+    <img src="img/📷%20Image.png" alt="Profile image">
+    <div class="upload">
+      <label class="upload-img-btn">
+        <input type="file" name="upload-img" id="avatar">
+        <button><img src="img/img.png" alt="Image upload"></button>
+      </label>
+      <p class="support-text">Up to 1 MB (300x300 px)</p>
+    </div>
+    <button class="delete"><img src="img/Trash.svg" alt="Trash"></button>
+  </fieldset>
+  <fieldset class="names">
+    <label>
+      <p class="capture">Name</p>
+      <input type="text">
+    </label>
+    <label>
+      <p class="capture">E-mail</p>
+      <input type="email">
+    </label>
+  </fieldset>
+  <fieldset class="country">
+    <label>
+      <p class="capture">Country</p>
+      <span class="dropdown">
+        <img src="img/Arrow%20%233%20Double.svg" alt="Dropdown icon">
+        <select name="country">
+        <option selected>Select</option>
+        <option>Ukraine</option>
+        <option>Poland</option>
+        <option>Turkey</option>
+      </select>
+      </span>
+    </label>
+    <label>
+      <p class="capture">City</p>
+      <input type="text">
+    </label>
+  </fieldset>
+  <fieldset class="names">
+    <label>
+      <p class="capture">Zip Code</p>
+      <input type="text">
+    </label>
+    <label>
+      <p class="capture">Phone Number</p>
+      <input type="number">
+    </label>
+  </fieldset>
+  <input type="submit" value="Update">
+</form>
+</body>
+</html>
