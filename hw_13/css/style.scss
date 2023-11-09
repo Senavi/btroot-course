@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap');
+
+$primary-color: #FFCC00;
+$primary-color-2: #666666;
+$secondary-color: #898F8F;
+
+body{
+  font-family: Roboto, "Raleway", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container{
+  max-width: 1170px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .team{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+    .team__head{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 40px;
+      position: relative;
+      border-bottom: 1px solid $primary-color;
+      width: 50%;
+
+      &:after{
+        position: absolute;
+        content: url('../img/bonfire.png');
+        background-color: white;
+        bottom: -15px;
+      }
+
+
+      h4{
+        color: $secondary-color;
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+
+      h1{
+        color: $primary-color;
+        font-size: 60px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-top: 15px;
+      }
+    }
+
+    .team__bottom{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      margin-top: 50px;
+
+      .col-left{
+        width: 100%;
+        max-height: 560px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid $primary-color;
+
+        .img{
+          padding: 40px;
+          position: relative;
+
+          img{
+            border: 1px solid $primary-color;
+          }
+          .outline{
+            width: 100px;
+            height: 100px;
+            border-top: 1px solid $primary-color;
+            border-right: 1px solid $primary-color;
+            position: absolute;
+          }
+
+          .box-1{
+            top: 25px;
+            left: 25px;
+            transform: rotate(270deg);
+          }
+          .box-2{
+            top: 25px;
+            right: 25px;
+          }
+          .box-3{
+            bottom: 25px;
+            left: 25px;
+            transform: rotate(180deg);
+          }
+          .box-4{
+            bottom: 25px;
+            right: 25px;
+            transform: rotate(90deg);
+          }
+        }
+      }
+
+      .col-right{
+        width: 100%;
+        max-height: 560px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2{
+          font-size: 36px;
+          font-weight: 700;
+          color: $primary-color-2;
+          padding-bottom: 30px;
+          border-bottom: 2px solid $primary-color;
+        }
+
+        .position{
+          font-family: Raleway, sans-serif;
+          font-weight: 400;
+          font-size: 24px;
+          margin-top: 20px;
+          margin-bottom: 15px;
+        }
+
+        .social-links{
+          display: flex;
+          gap: 10px;
+          margin-bottom: 30px;
+
+          a{
+            text-decoration: none;
+          }
+        }
+
+        .description{
+          font-size: 14px;
+          font-weight: 500;
+          font-family: Raleway, sans-serif;
+          line-height: 24px;
+          padding-bottom: 20px;
+          text-align: center;
+          max-width: 500px;
+          width: 100%;
+          position: relative;
+          margin-bottom: 30px;
+
+          &:after{
+            content: "";
+            width: 50px;
+            border-bottom: 5px dashed $primary-color;
+            height: 5px;
+            position: absolute;
+            bottom: 0;
+            left: 45%;
+          }
+        }
+
+        button{
+          background-color: transparent;
+          border: 2px solid $primary-color;
+          padding: 5px;
+          color: $primary-color-2;
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
