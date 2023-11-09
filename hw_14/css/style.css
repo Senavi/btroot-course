@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Red+Hat+Display:wght@400;500;600;700&display=swap");
+body {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  header {
+    height: 60px;
+  }
+}
+header .container {
+  max-width: 1170px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  header .container {
+    max-width: 700px;
+  }
+}
+header .container .col-right {
+  display: flex;
+}
+header .container .col-right nav {
+  display: flex;
+}
+@media (max-width: 768px) {
+  header .container .col-right nav {
+    display: none;
+  }
+}
+header .container .col-right nav ul {
+  display: flex;
+  gap: 20%;
+}
+header .container .col-right nav ul li {
+  width: fit-content;
+}
+header .container .col-right nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 30%;
+  color: #000000;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=style.css.map */

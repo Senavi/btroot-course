@@ -1,0 +1,61 @@
+@import "root";
+
+body{
+  font-family: $lato;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+header{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  @media (max-width: 768px) {
+    height: 60px;
+  }
+  
+  .container{
+    max-width: 1170px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      max-width: 700px;
+    }
+
+    .col-right{
+      display: flex;
+
+      nav{
+        display: flex;
+
+        @media (max-width: 768px) {
+          display: none;
+        }
+
+        ul{
+          display: flex;
+          gap: 20%;
+
+          li{
+            width: fit-content;
+
+            a{
+              text-decoration: none;
+              text-transform: uppercase;
+              @include font(14px, 400, 100%, 30%, $dark);
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
