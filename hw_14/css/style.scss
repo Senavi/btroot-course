@@ -1,26 +1,30 @@
 @import "root";
 
-body{
+* {
+  box-sizing: border-box;
+}
+
+body {
   font-family: $lato;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
 }
 
-header{
+header {
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   @media (max-width: 768px) {
     height: 60px;
   }
-  
-  .container{
+
+  .container {
     max-width: 1170px;
+    margin: 0 16px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -28,26 +32,30 @@ header{
 
     @media (max-width: 768px) {
       max-width: 700px;
+      width: 100%;
+      margin: 0 16px;
     }
 
-    .col-right{
+    .col-right {
       display: flex;
+      align-items: center;
 
-      nav{
+      nav {
         display: flex;
+        margin-right: 30px;
 
         @media (max-width: 768px) {
           display: none;
         }
 
-        ul{
+        ul {
           display: flex;
-          gap: 20%;
+          gap: 40px;
 
-          li{
+          li {
             width: fit-content;
 
-            a{
+            a {
               text-decoration: none;
               text-transform: uppercase;
               @include font(14px, 400, 100%, 30%, $dark);
@@ -56,6 +64,612 @@ header{
         }
       }
 
+      button {
+        border: none;
+        background-color: transparent;
+      }
+
+      .burger-menu {
+        display: none;
+
+        @media (max-width: 768px) {
+          display: block;
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .hero {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    img {
+      max-height: 600px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background-position: center;
+
+      @media (max-width: 768px) {
+        min-height: 320px;
+        height: 100%;
+      }
+
+      @media (max-width: 320px) {
+        min-height: 400px;
+        height: 100%;
+      }
+    }
+
+    .container {
+      max-width: 1170px;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      padding-top: 70px;
+      position: absolute;
+
+      @media (max-width: 768px) {
+        align-items: flex-start;
+        padding: 50px 16px 0 16px;
+      }
+      @media (max-width: 320px) {
+        align-items: flex-start;
+        padding: 50px 10px 0 10px;
+      }
+
+      h1 {
+        font-size: 2.625em;
+        font-family: $red-hat;
+        font-weight: 700;
+        line-height: 64px;
+        max-width: 60%;
+
+        @media (max-width: 768px) {
+          font-size: 36px;
+          line-height: 40px;
+        }
+        @media (max-width: 320px) {
+          font-size: 32px;
+          line-height: 40px;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .container {
+    max-width: 1170px;
+    margin: 90px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 0 16px;
+      margin-top: 70px;
+    }
+    @media (max-width: 320px) {
+      width: 100%;
+      padding: 0 10px;
+      margin-top: 70px;
+    }
+
+    .post-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        @include font(48px, 400, 64px, 0.5px, $dark)
+      }
+
+      .featured-post {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 30px;
+        margin: 50px 0;
+
+        @media (max-width: 320px) {
+          grid-template-columns: 1fr;
+          margin: 30px 0;
+        }
+
+        img {
+          max-width: 570px;
+          width: 100%;
+          max-height: 470px;
+          height: 100%;
+          object-fit: cover;
+          background-position: center;
+
+          @media (max-width: 768px) {
+            max-width: 340px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-position: center;
+          }
+          @media (max-width: 320px) {
+            order: 2;
+            max-width: 300px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-position: center;
+          }
+        }
+
+        .post-details {
+          @media (max-width: 320px) {
+            order: 1;
+          }
+
+          h4 {
+            @include font(16px, 400, 166%, 0.5px, $grey);
+            margin-bottom: 20px;
+          }
+
+          h3 {
+            @include font(23px, 500, 166%, 0.5px, $dark);
+            margin-bottom: 15px;
+          }
+
+          p {
+            @include font(16px, 400, 166%, 0.5px, $grey);
+            margin-top: 40px;
+          }
+
+          &:after {
+            content: url("../img/arrow.svg");
+            margin-left: 10px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          h3 {
+            @include font(23px, 500, 166%, 0.5px, $dark);
+            margin-bottom: 15px;
+
+            @media (max-width: 320px) {
+              margin-top: 10px;
+            }
+
+            p {
+              @include font(16px, 400, 166%, 0.5px, $grey);
+              margin-top: 50px;
+
+              @media (max-width: 320px) {
+                margin-top: 30px;
+              }
+
+              &:after {
+                content: url("../img/arrow.svg");
+                margin-left: 10px;
+
+                @media (max-width: 320px) {
+                  margin-left: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .latest-posts {
+      width: 100%;
+      margin: 90px 0;
+
+      @media (max-width: 768px) {
+        margin: 50px 0;
+      }
+
+      .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+
+        @media (max-width: 768px) {
+          margin-bottom: 30px;
+        }
+
+        h3 {
+          @include font(28px, 600, 166%, 2.8px, $dark);
+        }
+
+        a {
+          text-decoration: none;
+          @include font(16px, 400, 166%, 0.5px, $grey);
+
+          &:after {
+            content: url("../img/arrow.svg");
+            margin-left: 5px;
+          }
+        }
+      }
+
+      .posts_line {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        gap: 30px;
+
+        @media (max-width: 768px) {
+          grid-template-columns: 1fr;
+        }
+
+        .post {
+          max-height: 500px;
+          height: 100%;
+
+          @media (max-width: 768px) {
+            height: 240px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+          }
+
+          @media (max-width: 320px) {
+            max-height: 500px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+          }
+
+          img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            background-position: center;
+            margin-bottom: 25px;
+
+            @media (max-width: 768px) {
+              max-width: 340px;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              background-position: center;
+              margin-bottom: 0;
+              margin-right: 20px;
+            }
+
+            @media (max-width: 320px) {
+              width: 100%;
+              height: 240px;
+              object-fit: cover;
+              background-position: center;
+              margin-bottom: 20px;
+              margin-right: 0;
+            }
+          }
+
+          .post_bottom {
+            display: flex;
+            flex-direction: column;
+
+            .post_data {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 25px;
+
+              a {
+                text-decoration: none;
+                @include font(12px, 400, 166%, 0.5px, $grey);
+              }
+
+              p {
+                @include font(12px, 400, 166%, 0.5px, $grey);
+                margin: 0;
+              }
+            }
+
+            h3 {
+              @include font(23px, 500, 166%, 0.5px, $dark);
+              margin-bottom: 15px;
+            }
+
+            p {
+              @include font(16px, 400, 166%, 0.5px, $grey);
+              margin-top: 20px;
+
+              @media (max-width: 320px) {
+                margin-top: 10px;
+              }
+            }
+          }
+
+
+        }
+      }
+    }
+
+    .popular-posts {
+      width: 100%;
+      margin: 60px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 768px) {
+        margin: 50px 0;
+      }
+
+      .head {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+
+        @media (max-width: 768px) {
+          margin-bottom: 30px;
+        }
+
+        h3 {
+          @include font(28px, 600, 166%, 2.8px, $dark);
+        }
+
+        a {
+          text-decoration: none;
+          @include font(16px, 400, 166%, 0.5px, $grey);
+
+          &:after {
+            content: url("../img/arrow.svg");
+            margin-left: 5px;
+          }
+        }
+      }
+
+      .posts_line {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 30px;
+
+        @media (max-width: 320px) {
+          grid-template-columns: 1fr;
+        }
+
+
+        .post {
+          max-height: 500px;
+          height: 100%;
+
+          @media (max-width: 768px) {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+          }
+
+          @media (max-width: 320px) {
+            max-height: 500px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+          }
+
+          img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            background-position: center;
+            margin-bottom: 25px;
+
+            @media (max-width: 768px) {
+              width: 100%;
+              height: 360px;
+              object-fit: cover;
+              background-position: center;
+              margin-bottom: 20px;
+              margin-right: 0;
+            }
+
+            @media (max-width: 320px) {
+              width: 100%;
+              height: 240px;
+              object-fit: cover;
+              background-position: center;
+              margin-bottom: 20px;
+              margin-right: 0;
+            }
+          }
+
+          .post_bottom {
+            display: flex;
+            flex-direction: column;
+
+            .post_data {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 25px;
+
+              a {
+                text-decoration: none;
+                @include font(12px, 400, 166%, 0.5px, $grey);
+              }
+
+              p {
+                @include font(12px, 400, 166%, 0.5px, $grey);
+                margin: 0;
+              }
+            }
+
+            h3 {
+              @include font(23px, 500, 166%, 0.5px, $dark);
+              margin-bottom: 15px;
+            }
+
+            p {
+              @include font(16px, 400, 166%, 0.5px, $grey);
+              margin-top: 20px;
+
+              @media (max-width: 320px) {
+                margin-top: 10px;
+              }
+            }
+          }
+
+
+        }
+      }
+
+      button {
+        @include font(16px, 700, 166%, 1.6px, #fff);
+        padding: 10px 45px;
+        max-width: 200px;
+        width: 100%;
+        border: none;
+        background-color: $dark;
+        margin-top: 50px;
+      }
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      margin-top: 50px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      h4 {
+        @include font(23px, 400, 166%, 0.5px, $dark);
+        max-width: 60%;
+        width: 100%;
+
+        &:after {
+          content: url("../img/arrow.svg");
+          margin-left: 5px;
+        }
+      }
+
+      p {
+        @include font(19px, 400, 166%, 0.5px, $grey);
+
+        @media (max-width: 768px) {
+          text-align: right;
+        }
+
+        @media (max-width: 320px) {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  background-color: #F4F4F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    max-width: 1170px;
+    margin: 60px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 0 16px;
+      margin-top: 70px;
+    }
+    @media (max-width: 320px) {
+      width: 100%;
+      padding: 0 10px;
+      margin-top: 70px;
+    }
+
+    .inner_container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (max-width: 768px) {
+        text-align: center;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .left-col{
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+          @include font(48px, 400, 64px, 2.4px, $dark);
+          margin-bottom: 30px;
+
+          @media (max-width: 320px) {
+            font-size: 32px;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          @include font(16px, 400, 166%, 1.6px, $dark);
+          margin-bottom: 15px;
+
+          &:nth-child(2) {
+            margin-bottom: 0;
+          }
+        }
+      }
+      .col-right{
+        display: flex;
+        gap: 10px;
+
+        @media (max-width: 768px) {
+          margin-bottom: 30px;
+        }
+
+        a{
+          border: 1px solid $dark;
+          height: 50px;
+          width: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &:hover{
+            background-color: #565656;
+          }
+        }
+      }
     }
   }
 }
