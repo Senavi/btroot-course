@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Homework 1 Javascript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="car">
+  <h3>Car Information</h3>
+  <div class="info">
+  </div>
+  <div class="drivers">
+  </div>
+</div>
+<form action="#" method="get">
+  <h3>Add new driver</h3>
+  <label>
+    <input type="text" id="addDriver" placeholder="Driver name">
+  </label>
+  <label>
+    <input type="number" id="age" placeholder="Driver age">
+  </label>
+  <input type="submit" id="addBtn" value="Add to list">
+</form>
+<form action="#" method="get">
+  <h3>Search driver</h3>
+  <label>
+    <input type="text" id="searchDriver" placeholder="Driver name">
+  </label>
+  <input type="submit" id="searchBtn" value="Search">
+  <p class="result"></p>
+</form>
+<form action="#" method="get">
+  <h3>Fuel spent & Time</h3>
+  <label>
+    <input type="number" id="distance" placeholder="Enter distance (km)">
+  </label>
+  <input type="submit" id="Calculate" value="Calculate">
+  <p class="resultCalculation"></p>
+</form>
+<script src="script.js"></script>
+</body>
+</html>
