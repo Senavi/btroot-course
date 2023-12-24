@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Events</title>
+  <script src="script.js" defer></script>
+  <style>
+      .traffic-light {
+          width: 100px;
+          height: 300px;
+          background-color: #333;
+          padding: 20px;
+          border-radius: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+      }
+      .light {
+          width: 60px;
+          height: 60px;
+          background-color: #111;
+          border-radius: 50%;
+          margin: 0 auto;
+      }
+      #resizeable {
+          width: 300px;
+          height: 200px;
+          border: 2px solid #333;
+          position: relative;
+          overflow: auto;
+      }
+      #resizer {
+          width: 10px;
+          height: 10px;
+          background-color: #333;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          cursor: nwse-resize;
+      }
+  </style>
+</head>
+<body>
+<div class="traffic-light">
+  <div id="red" class="light"></div>
+  <div id="yellow" class="light"></div>
+  <div id="green" class="light"></div>
+</div>
+<button id="changeButton">Перемкнути</button>
+<div id="resizeable">
+  <p>Це блок тексту, розмір якого можна змінювати.</p>
+  <div id="resizer"></div>
+</div>
+</body>
+</html>
